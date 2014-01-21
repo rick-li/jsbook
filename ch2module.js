@@ -11,6 +11,9 @@ function getBasePath() {
     var nodes = document.getElementsByTagName("script");
     var node = nodes[nodes.length - 1];
     var src = document.querySelector ? node.src : node.getAttribute("src", 4);
+    //document.querySelector 检查是否是非ie7 ie8
+    //http://msdn.microsoft.com/en-us/library/ie/ms536429(v=vs.85).aspx
+    //lFlags = 4  取得完整URL
     return src;
 }
 /*
@@ -32,7 +35,7 @@ function getBasePath() {
     } else {
         node = nodes[nodes.length - 1];
     }
-    var src = document.querySelector ? node.src : node.getAttribute("src", 4);
+    var src = document.querySelector ? node.src : node.getAttribute("sr
     return src;
 }
 function getBasePath() {
